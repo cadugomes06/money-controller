@@ -1,0 +1,49 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 5px 15px;
+    width: 30%;
+}
+
+@media (max-width: 750px) {
+    .divItem {
+        width: 20%;
+    }
+    .divItem p {
+        font-size: 12px;
+    }
+    .divItem span {
+        font-size: 20px;
+    }
+    .svg {
+        display: none;
+    }
+}
+
+.divValores {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 60px;
+    gap: 10px;
+}
+svg {
+    width: 25px;
+    height: 25px;
+}
+
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+}
+.span {
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+}

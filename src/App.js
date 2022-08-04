@@ -1,14 +1,18 @@
-import {React} from 'react';
+import { React } from 'react';
 import './App.css';
-import Header from './components/Header'
-import Navbar from './components/Navbar'
+import Resume from './components/Resume'
 
 function App() {
+
   return (
-    <div className="App">
-      <Header />
-      <Navbar />
+    <>
+    <div className="container">
+      <div>
+      <h1 className='title'>Controle Financeiro</h1>
+      </div>
     </div>
+    <Resume />
+</>
   );
 }
 

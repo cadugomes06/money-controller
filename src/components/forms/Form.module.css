@@ -1,0 +1,59 @@
+.container {
+    max-width: 1120px;
+    margin: 20px auto;
+    width: 98%;
+    background-color: #fff;
+    box-shadow: 0px 0px 5px #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0px;
+    gap: 10px;
+}
+
+@media (max-width: 650px) {
+    .container {
+        display: grid;
+    } 
+}
+
+.inputContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+}
+
+.radioArea {
+    display: flex;
+    align-items: center;
+}
+
+.label {
+    cursor: pointer;
+    display: block;
+}
+
+.inputRadio {
+    margin-left: 10px;
+    margin-right: 10px;
+    accent-color: black;
+    margin-top: 0;
+    cursor: pointer;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: teal;
+    text-transform: uppercase;
+}

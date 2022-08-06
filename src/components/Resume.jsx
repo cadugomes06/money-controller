@@ -1,19 +1,14 @@
 import React from 'react'
 import styles from './Resume.module.css'
 import ResumeItem from './ResumeItem'
-import Form from './forms/Form'
 
-const Resume = () => {
+const Resume = ({income, expense, total}) => {
   return (
-    <>
     <div className={styles.container}>
-        <ResumeItem title="Entradas" value="1000" />
-        <ResumeItem title="Saídas" value="1000" />
-      <ResumeItem title="Total" value="1000" />
-
+        <ResumeItem title="Entradas" value={income} />
+        <ResumeItem title="Saídas" value={expense} />
+      <ResumeItem title="Total" value={total} />
         </div>
-        <Form />
-        </>
   )
 }
 

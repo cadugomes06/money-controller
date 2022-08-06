@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 import styles from './Form.module.css'
 
-const Form = () => {
+const Form = ({ handleAdd }) => {
     const [desc, setDesc] = useState('')
     const [amount, setAmount] = useState('')
     const [expense, setExpense] = useState(false)
+
+    const generateID = () => Math.round(Math.random() * 1000);
 
  const handleSave = () => {
     if (!desc || !amount) {
@@ -14,7 +16,19 @@ const Form = () => {
         alert('O valor tem que ser positivo!')
         return;
     }
- }   
+    const transaction = {
+      id: generateID(),
+      desc: desc,
+      amount: amount,
+      expense: expense
+     };
+
+     handleAdd(transaction)
+     setDesc("");
+     setAmount("")
+    
+    }   
+    
 
   return (
     <>
@@ -56,7 +70,7 @@ const Form = () => {
              />
         </div>
 
-        <button className={styles.btn} >
+        <button className={styles.btn} onClick={handleSave} >
         Adicionar
         </button>
    </div>    

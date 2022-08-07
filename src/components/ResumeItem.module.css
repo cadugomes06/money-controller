@@ -31,10 +31,6 @@
     height: 60px;
     gap: 10px;
 }
-svg {
-    width: 25px;
-    height: 25px;
-}
 
 .title {
     font-family: 'Poppins', sans-serif;

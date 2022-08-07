@@ -19,12 +19,12 @@
     justify-items: center;
     width: 79%;
     padding: 20px;
-    margin-bottom: 20px;
     background-color: #fff;
     box-shadow: 0px 0px 5px #ccc;
     color: black;
     margin: -15px auto;
     border-radius: 5px;
+    text-align: center;
 }
 
 /*.tableItens {

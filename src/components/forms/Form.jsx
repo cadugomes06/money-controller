@@ -36,7 +36,7 @@ const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
     <>
    <div className={styles.container}>
         <div className={styles.inputContent}>
-            <label>Descrição</label>
+            <label>Produto/Serviço</label>
             <input className={styles.input}
             type="text"
             value={desc}

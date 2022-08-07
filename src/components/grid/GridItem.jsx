@@ -8,7 +8,7 @@ const GridItem = ({ item, onDelete }) => {
     <div className={styles.table}>
 
       <div>{item.desc}</div>
-      <div>{item.amount}</div>
+      <div>R$ {item.amount}</div>
       <div>
         {item.expense ? (
           <FaRegArrowAltCircleDown color="red" /> 
@@ -16,7 +16,9 @@ const GridItem = ({ item, onDelete }) => {
           <FaRegArrowAltCircleUp color="green" />
         )}
       </div>      
-        <FaTrash onClick={() => onDelete(item.id)} />
+        <FaTrash 
+        onClick={() => onDelete(item.id)}
+        style={{cursor: 'pointer'}} />
     </div>
   )
 }

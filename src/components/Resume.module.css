@@ -7,3 +7,12 @@
     margin-top: -50px;
     justify-content: space-around;
 }
+
+svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .green{
+    color: green;
+  }

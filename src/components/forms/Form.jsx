@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import styles from './Form.module.css'
+import Grid from '../grid/Grid'
 
-const Form = ({ handleAdd }) => {
+const Form = ({ handleAdd, transactionsList, setTransactionsList }) => {
     const [desc, setDesc] = useState('')
     const [amount, setAmount] = useState('')
-    const [expense, setExpense] = useState(false)
+    const [isExpense, setExpense] = useState(false)
 
     const generateID = () => Math.round(Math.random() * 1000);
 
@@ -16,11 +17,12 @@ const Form = ({ handleAdd }) => {
         alert('O valor tem que ser positivo!')
         return;
     }
+    
     const transaction = {
       id: generateID(),
       desc: desc,
       amount: amount,
-      expense: expense
+      expense: isExpense
      };
 
      handleAdd(transaction)
@@ -57,15 +59,13 @@ const Form = ({ handleAdd }) => {
             id='entra'
             name='grupo1'
             defaultChecked
-             value={expense} 
-             onChange={({target}) => setExpense(target.value)}
+             onChange={({target}) => setExpense(!isExpense)}
             />
               <label htmlFor='sai' className={styles.label}>Saída</label>
             <input className={styles.inputRadio}
             type="radio"
             id='sai'
             name='grupo1'
-             value={expense} 
              onChange={({target}) => setExpense(target.value)}
              />
         </div>
@@ -74,6 +74,7 @@ const Form = ({ handleAdd }) => {
         Adicionar
         </button>
    </div>    
+    <Grid itens={transactionsList} setItens={setTransactionsList} />
     </>
   )
 }

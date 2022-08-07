@@ -31,6 +31,8 @@ const  App = () => {
     setTotal(`${Number(income) < Number(expense) ? "-" : ""}R$ ${total}`)
   }, [transactionsList])
 
+
+
   const handleAdd = (transaction) => {
     const newArrayTransactions  = [...transactionsList, transaction];
 
@@ -47,7 +49,10 @@ const  App = () => {
       </div>
     </div>
     <Resume income={income} expense={expense} total={total} />
-    <Form  handleAdd={handleAdd} />
+    <Form  handleAdd={handleAdd}
+     transactionsList={transactionsList}
+     setTransactionsList={setTransactionsList}
+      />
 </>
   );
 }
